@@ -1,0 +1,47 @@
+{
+  "name": "stp/apns-messenger",
+  "description": "apns messenger service",
+  "version": "0.1",
+  "minimum-stability": "stable",
+  "type": "library",
+  "keywords": [
+    "schibsted",
+    "stp",
+    "apns",
+    "message",
+    "push"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michal Plachta",
+      "email": "michal.plachta@schibsted.pl"
+    }
+  ],
+  "require": {
+    "zendframework/zendservice-apple-apns": "1.0.4",
+    "symfony/console": "2.6.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.5.*",
+    "phpmd/phpmd": "2.2.*",
+    "sebastian/phpcpd": "2.0.*",
+    "squizlabs/php_codesniffer": "2.3.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Stp\\": "src/"
+    }
+  },
+  "bin": [
+    "bin/stpconsole"
+  ],
+  "scripts": {
+    "post-install-cmd": [
+      "cp config/config.php.dist config/config.php"
+    ],
+    "post-update-cmd": [
+      "cp config/config.php.dist config/config.php"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+<?php
+
+$config = [
+    'cert' => 'data/apns_push_sandbox.pem',
+    'passPhrase' => ''
+];
